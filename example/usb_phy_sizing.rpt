@@ -1,0 +1,97 @@
+Initial slack:	52.162445 ps
+Initial leakage:	0.005988 W
+Final Sum/Max/Number of max capacitance violations: 0 / 0 / 0
+Final Sum/Max/Number of max transition violations: 0 / 0 / 0
+======================================
+- cell FE_DBTC0_i_tx_phy_state_1_ is swapped to in01m03
+- cell FE_OFC1_fs_ce is swapped to in01m04
+- cell U409 is swapped to ao12m01
+- cell U412 is swapped to ao22m01
+- cell U414 is swapped to no02m02
+- cell U418 is swapped to ao12m02
+- cell U420 is swapped to na02m01
+- cell U422 is swapped to no04m04
+- cell U423 is swapped to na02m02
+- cell U424 is swapped to no02m04
+- cell U425 is swapped to no04m06
+- cell U435 is swapped to no04m02
+- cell U436 is swapped to oa12m02
+- cell U437 is swapped to na02m08
+- cell U437 is swapped to na02f04
+- cell U440 is swapped to ao12m02
+- cell U441 is swapped to na02m02
+- cell U442 is swapped to no02m01
+- cell U443 is swapped to no02m04
+- cell U445 is swapped to in01m01
+- cell U448 is swapped to ao12m02
+- cell U450 is swapped to in01m02
+- cell U452 is swapped to no03m03
+- cell U456 is swapped to ao12m02
+- cell U457 is swapped to oa12m01
+- cell U458 is swapped to no02m03
+- cell U459 is swapped to na02m02
+- cell U460 is swapped to oa22m01
+- cell U461 is swapped to ao12m01
+- cell U462 is swapped to na02m03
+- cell U463 is swapped to no02m01
+- cell U465 is swapped to in01m01
+- cell U466 is swapped to in01m02
+- cell U470 is swapped to oa22m01
+- cell U472 is swapped to ao22m02
+- cell U475 is swapped to na02m01
+- cell U477 is swapped to na02m01
+- cell U479 is swapped to na02m01
+- cell U481 is swapped to ao12m02
+- cell U482 is swapped to no04m02
+- cell U483 is swapped to no02m02
+- cell U484 is swapped to ao12m01
+- cell U485 is swapped to in01m01
+- cell U486 is swapped to ao22m01
+- cell U487 is swapped to in01m02
+- cell U489 is swapped to oa22m02
+- cell U490 is swapped to no02m02
+- cell U491 is swapped to oa12m02
+- cell U492 is swapped to ao12m02
+- cell U495 is swapped to ao12m01
+- cell U498 is swapped to in01m01
+- cell U500 is swapped to na03m02
+- cell U501 is swapped to no02m02
+- cell U532 is swapped to no02m04
+- cell U533 is swapped to in01m02
+- cell U535 is swapped to in01m02
+- cell U551 is swapped to na03m02
+- cell U552 is swapped to in01m02
+- cell U553 is swapped to no02m02
+- cell U571 is swapped to no02m02
+- cell U613 is swapped to in01m01
+- cell U614 is swapped to in01m01
+- cell U625 is swapped to no02m01
+- cell U628 is swapped to na02m02
+- cell U637 is swapped to na02m01
+- cell U643 is swapped to oa12m01
+- cell U648 is swapped to in01m01
+- cell U657 is swapped to ao22m01
+- cell U660 is swapped to oa12m01
+- cell U662 is swapped to ao12m01
+- cell U667 is swapped to no02m02
+- cell U687 is swapped to ao22m01
+- cell U688 is swapped to no02m01
+- cell U690 is swapped to oa22m01
+- cell U693 is swapped to na03m01
+- cell U694 is swapped to oa22m01
+- cell U704 is swapped to ao22m01
+- cell U708 is swapped to ao22m01
+- cell U710 is swapped to ao22m01
+- cell U716 is swapped to na02m01
+- cell U718 is swapped to no02m01
+- cell U722 is swapped to ao12m01
+- cell U724 is swapped to no02m02
+- cell U744 is swapped to oa12m01
+======================================
+Final slack:	15.405548 ps
+Final leakage:	0.00222 W
+Final Sum/Max/Number of max capacitance violations: 0 / 0 / 0
+Final Sum/Max/Number of max transition violations: 0 / 0 / 0
+#Vt cell swaps:	83
+#Cell size swaps:	1
+Leakage improvment	62.926 %
