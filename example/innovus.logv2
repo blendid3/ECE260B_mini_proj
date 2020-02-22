@@ -1,0 +1,13 @@
+[02/21 16:17:28      0] 
+[02/21 16:17:28      0] Cadence Innovus(TM) Implementation System.
+[02/21 16:17:28      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/21 16:17:28      0] 
+[02/21 16:17:28      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[02/21 16:17:28      0] Options:	ls 
+[02/21 16:17:28      0] Date:		Fri Feb 21 16:17:28 2020
+[02/21 16:17:28      0] Host:		ieng6-249.ucsd.edu (x86_64 w/Linux 3.10.0-1062.9.1.el7.x86_64) (2cores*4cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB)
+[02/21 16:17:28      0] OS:		CentOS Linux release 7.7.1908 (Core)
+[02/21 16:17:28      0] 
+[02/21 16:17:28      0] License:
+[02/21 16:17:28      0] **ERROR: (IMPLIC-68):	Unknown argument: ls.
+[02/21 16:17:28      0] 	Run "innovus -help" for valid option/argument.

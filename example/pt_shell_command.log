@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running pt_shell Version K-2015.06-SP3-1 for linux64 -- Dec 11, 2015
-#@ # Date:   Fri Feb 21 15:04:54 2020
+#@ # Date:   Fri Feb 21 16:21:43 2020
 #@ # Run by: haz023@ieng6-249.ucsd.edu
 #@ 
 
@@ -953,8 +953,8 @@ source /acsnfs3/software/Synopsys-primetime-2015.06-SP3/admin/setup/.synopsys_pt
 #@ }
 #@ # -- End source /acsnfs3/software/Synopsys-primetime-2015.06-SP3/auxx/tcllib/lib/itcl3.4/itcl.tcl
 
-source -echo -verbose run_pt.tcl
-#@ # -- Starting source run_pt.tcl
+source -echo -verbose eva_pt.tcl
+#@ # -- Starting source eva_pt.tcl
 
 #@ source ./pt_cmds.tcl
 #@ # -- Starting source ./pt_cmds.tcl
@@ -1405,98 +1405,29 @@ source -echo -verbose run_pt.tcl
 #@ set search_path ". "
 #@ set link_path [list * /home/linux/ieng6/ee260bwi20/public/data/libraries/lib/contest.db]
 #@ 
-#@ read_verilog ./${design}.v
+#@ read_verilog ./${design}_eco.v
 #@ current_design $design 
 #@ link_design $design 
 #@ read_sdc ./${design}.sdc
-#@ read_parasitics ./${design}.spef
+#@ read_parasitics ./${design}_eco.spef
 #@ 
 #@ set report_default_significant_digits 6
 #@ set timing_save_pin_arrival_and_slack true
 #@ set timing_report_always_use_valid_start_end_points false
 #@ set rc_cache_min_max_rise_fall_ceff true
 #@ 
+#@ 
 #@ check_timing
 #@ 
-#@ source size.tcl
-#@ # -- Starting source size.tcl
-
-#@ set design [get_attri [current_design] full_name]
-#@ set outFp [open ${design}_sizing.rpt w]
-#@ 
-#@ set initialWNS  [ PtWorstSlack clk ]
-#@ set initialLeak [ PtLeakPower ]
-#@ set capVio [ PtGetCapVio ]
-#@ set tranVio [ PtGetTranVio ]
-#@ puts "Initial slack:\t${initialWNS} ps"
-#@ puts "Initial leakage:\t${initialLeak} W"
-#@ puts "Final $capVio"
-#@ puts "Final $tranVio"
-#@ puts "======================================" 
-#@ puts $outFp "Initial slack:\t${initialWNS} ps"
-#@ puts $outFp "Initial leakage:\t${initialLeak} W"
-#@ puts $outFp "Final $capVio"
-#@ puts $outFp "Final $tranVio"
-#@ puts $outFp "======================================" 
-#@ 
-#@ set cellList [sort_collection [get_cells *] base_name]
-#@ set VtswapCnt 0
-#@ set SizeswapCnt 0
-#@ foreach_in_collection cell $cellList {
-#@     set cellName [get_attri $cell base_name]
-#@     set libcell [get_lib_cells -of_objects $cellName]
-#@     set libcellName [get_attri $libcell base_name]
-#@     if {$libcellName == "ms00f80"} {
-#@         continue
-#@     }
-#@     #Vt cell swap example (convert all fast cells (i.e. LVT) to medium cells (i.e. NVT)...
-#@     if { [regexp {[a-z][a-z][0-9][0-9]f[0-9][0-9]} $libcellName] } { 
-#@         set newlibcellName [string replace $libcellName 4 4 m] 
-#@         size_cell $cellName $newlibcellName
-#@         
-#@         set newWNS [ PtWorstSlack clk ]
-#@         if { $newWNS < 0.0 } {
-#@             size_cell $cellName $libcellName
-#@         } else {
-#@             incr VtswapCnt
-#@             puts $outFp "- cell ${cellName} is swapped to $newlibcellName"
-#@         }
-#@     }
-#@     #cell size swap example (convert all cells of size 08 to 04)...
-#@     if { [regexp {[a-z][a-z][0-9][0-9][smf]08} $libcellName] } { 
-#@         set newlibcellName [string replace $libcellName 5 6 "04"]
-#@         size_cell $cellName $newlibcellName
-#@         
-#@         set newWNS [ PtWorstSlack clk ]
-#@         if { $newWNS < 0.0 } {
-#@             size_cell $cellName $libcellName
-#@         } else {
-#@             incr SizeswapCnt
-#@             puts $outFp "- cell ${cellName} is swapped to $newlibcellName"
-#@         }
-#@     }
-#@ }
-#@ 
+#@ set outFp [open ${design}_eco.rpt w]
 #@ set finalWNS  [ PtWorstSlack clk ]
 #@ set finalLeak [ PtLeakPower ]
 #@ set capVio [ PtGetCapVio ]
 #@ set tranVio [ PtGetTranVio ]
-#@ set improvment  [format "%.3f" [expr ( $initialLeak - $finalLeak ) / $initialLeak * 100.0]]
-#@ puts $outFp "======================================" 
-#@ puts $outFp "Final slack:\t${finalWNS} ps"
-#@ puts $outFp "Final leakage:\t${finalLeak} W"
-#@ puts $outFp "Final $capVio"
-#@ puts $outFp "Final $tranVio"
-#@ puts $outFp "#Vt cell swaps:\t${VtswapCnt}"
-#@ puts $outFp "#Cell size swaps:\t${SizeswapCnt}"
-#@ puts $outFp "Leakage improvment\t${improvment} %"
-#@ 
-#@ close $outFp    
-#@ 
-#@ 
-#@ # -- End source size.tcl
-
-#@ 
-#@ write_changes -format ptsh -out cell.sizes  
+#@ puts $outFp "(after eco) Final slack :\t${finalWNS} ps"
+#@ puts $outFp "(after eco) Final leakage :\t${finalLeak} W"
+#@ puts $outFp "(after eco) $capVio"
+#@ puts $outFp "(after eco) $tranVio"
+#@ close $outFp
 #@ 
 #@ exit
