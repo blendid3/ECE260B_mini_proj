@@ -4,7 +4,7 @@ source ./pt_cmds.tcl
 set power_enable_analysis TRUE
 set power_analysis_mode averaged
 
-set design  _DESIGN_
+set design  aes_cipher_top
 
 set timing_remove_clock_reconvergence_pessimism true
 

@@ -1,4 +1,4 @@
-set design _DESIGN_
+set design mpeg2_top
 
 set netlist "./${design}.v"
 set sdc "./${design}.sdc"

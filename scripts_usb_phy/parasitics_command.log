@@ -4,7 +4,7 @@ Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 0 ns
 Report : read_parasitics /home/linux/ieng6/ee260bwi20/haz023/mp_1/scripts_usb_phy/usb_phy_eco.spef
 Design : usb_phy
 Version: K-2015.06-SP3-1
-Date   : Sun Feb 23 14:09:19 2020
+Date   : Sun Feb 23 14:20:01 2020
 ****************************************
 
         0 error(s)
