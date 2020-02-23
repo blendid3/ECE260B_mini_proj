@@ -1,0 +1,5 @@
+run_pt.tcl  	: PT script for sizing
+size.tcl    	: sizing methodology (implement your sizing algorithm here)
+run_eco.tcl 	: ECO flow in Innovus
+eva_pt.tcl  	: PT script to evaluate post-ECO timing and power
+pt_cmd.tcl  	: useful PT functions

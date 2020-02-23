@@ -1,0 +1,65 @@
+[02/23 13:55:01      0] 
+[02/23 13:55:01      0] Cadence Innovus(TM) Implementation System.
+[02/23 13:55:01      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/23 13:55:01      0] 
+[02/23 13:55:01      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[02/23 13:55:01      0] Options:	-nowin -init run_eco.tcl 
+[02/23 13:55:01      0] Date:		Sun Feb 23 13:55:01 2020
+[02/23 13:55:01      0] Host:		ieng6-249.ucsd.edu (x86_64 w/Linux 3.10.0-1062.9.1.el7.x86_64) (2cores*4cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB)
+[02/23 13:55:01      0] OS:		CentOS Linux release 7.7.1908 (Core)
+[02/23 13:55:01      0] 
+[02/23 13:55:01      0] License:
+[02/23 13:55:01      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[02/23 13:55:01      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/23 13:55:21     15] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[02/23 13:55:21     15] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[02/23 13:55:21     15] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[02/23 13:55:21     15] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[02/23 13:55:21     15] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[02/23 13:55:21     15] @(#)CDS: CPE v15.23-s045
+[02/23 13:55:21     15] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[02/23 13:55:21     15] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[02/23 13:55:21     15] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/23 13:55:21     15] @(#)CDS: RCDB 11.7
+[02/23 13:55:21     15] --- Running on ieng6-249.ucsd.edu (x86_64 w/Linux 3.10.0-1062.9.1.el7.x86_64) (2cores*4cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB) ---
+[02/23 13:55:21     15] Create and set the environment variable TMPDIR to /tmp/innovus_temp_17045_ieng6-249.ucsd.edu_haz023_Hi2sbY.
+
+[02/23 13:55:21     15] 
+[02/23 13:55:21     15] **INFO:  MMMC transition support version v31-84 
+[02/23 13:55:21     15] 
+[02/23 13:55:21     15] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/23 13:55:21     15] <CMD> suppressMessage ENCEXT-2799
+[02/23 13:55:21     16] Sourcing file "run_eco.tcl" ...
+[02/23 13:55:21     16] <CMD> set init_pwr_net VDD
+[02/23 13:55:21     16] <CMD> set init_gnd_net VSS
+[02/23 13:55:21     16] <CMD> set init_verilog ./_DESIGN_.v
+[02/23 13:55:21     16] <CMD> set init_design_netlisttype Verilog
+[02/23 13:55:21     16] <CMD> set init_design_settop 1
+[02/23 13:55:21     16] <CMD> set init_top_cell _DESIGN_
+[02/23 13:55:21     16] <CMD> set init_lef_file /home/linux/ieng6/ee260bwi20/public/data/libraries/techfiles/contest.lef
+[02/23 13:55:21     16] <CMD> create_library_set -name WC_LIB -timing $libworst
+[02/23 13:55:21     16] <CMD> create_library_set -name BC_LIB -timing $libworst
+[02/23 13:55:21     16] <CMD> create_rc_corner -name Cmax -cap_table $captblworst -T 125
+[02/23 13:55:21     16] <CMD> create_rc_corner -name Cmin -cap_table $captblworst -T -40
+[02/23 13:55:21     16] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[02/23 13:55:21     16] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[02/23 13:55:21     16] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[02/23 13:55:21     16] **ERROR: (TCLCMD-989):	cannot open SDC file './_DESIGN_.sdc' for mode 'CON'
+[02/23 13:55:21     16] **ERROR: (IMPSYT-6692):	Invalid return code while executing 'run_eco.tcl' was returned and script processing was stopped. Review the following error in 'run_eco.tcl' then restart.
+[02/23 13:55:21     16] Error info: run_eco.tcl: 
+[02/23 13:55:21     16]     while executing
+[02/23 13:55:21     16] "create_constraint_mode -name CON -sdc_file [list $sdc]"
+[02/23 13:55:21     16]     (file "run_eco.tcl" line 29)
+[02/23 13:55:21     16]     invoked from within
+[02/23 13:55:21     16] "::se_source_orig run_eco.tcl"
+[02/23 13:55:21     16]     ("uplevel" body line 1)
+[02/23 13:55:21     16]     invoked from within
+[02/23 13:55:21     16] "uplevel [concat ::se_source_orig $args]"
+[02/23 13:55:21     16]     (procedure "source" line 97)
+[02/23 13:55:21     16]     invoked from within
+[02/23 13:55:21     16] "source run_eco.tcl"
+[02/23 13:55:21     16]     (in namespace inscope "::" script line 1)
+[02/23 13:55:21     16]     invoked from within
+[02/23 13:55:21     16] "namespace inscope :: source $fileName".
+[02/23 13:59:59     16] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[02/23 13:59:59     16] Innovus terminated by user interrupt.

@@ -1,0 +1,13 @@
+[02/23 13:36:49      0] 
+[02/23 13:36:49      0] Cadence Innovus(TM) Implementation System.
+[02/23 13:36:49      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/23 13:36:49      0] 
+[02/23 13:36:49      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[02/23 13:36:49      0] Options:	run_pt.tcl 
+[02/23 13:36:49      0] Date:		Sun Feb 23 13:36:49 2020
+[02/23 13:36:49      0] Host:		ieng6-247.ucsd.edu (x86_64 w/Linux 3.10.0-1062.9.1.el7.x86_64) (2cores*4cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+[02/23 13:36:49      0] OS:		CentOS Linux release 7.7.1908 (Core)
+[02/23 13:36:49      0] 
+[02/23 13:36:49      0] License:
+[02/23 13:36:49      0] **ERROR: (IMPLIC-68):	Unknown argument: run_pt.tcl.
+[02/23 13:36:49      0] 	Run "innovus -help" for valid option/argument.

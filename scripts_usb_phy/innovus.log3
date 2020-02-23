@@ -1,0 +1,52 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+Options:	-nowin -init run_eco.tcl 
+Date:		Sun Feb 23 13:55:01 2020
+Host:		ieng6-249.ucsd.edu (x86_64 w/Linux 3.10.0-1062.9.1.el7.x86_64) (2cores*4cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB)
+OS:		CentOS Linux release 7.7.1908 (Core)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+Sourcing file "run_eco.tcl" ...
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_verilog ./_DESIGN_.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell _DESIGN_
+<CMD> set init_lef_file /home/linux/ieng6/ee260bwi20/public/data/libraries/techfiles/contest.lef
+<CMD> create_library_set -name WC_LIB -timing $libworst
+<CMD> create_library_set -name BC_LIB -timing $libworst
+<CMD> create_rc_corner -name Cmax -cap_table $captblworst -T 125
+<CMD> create_rc_corner -name Cmin -cap_table $captblworst -T -40
+<CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+<CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+<CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+**ERROR: (TCLCMD-989):	cannot open SDC file './_DESIGN_.sdc' for mode 'CON'
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'run_eco.tcl' was returned and script processing was stopped. Review the following error in 'run_eco.tcl' then restart.
+Error info: run_eco.tcl: 
+    while executing
+"create_constraint_mode -name CON -sdc_file [list $sdc]"
+    (file "run_eco.tcl" line 29)
+    invoked from within
+"::se_source_orig run_eco.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel [concat ::se_source_orig $args]"
+    (procedure "source" line 97)
+    invoked from within
+"source run_eco.tcl"
+    (in namespace inscope "::" script line 1)
+    invoked from within
+"namespace inscope :: source $fileName".
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
